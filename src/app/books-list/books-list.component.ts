@@ -12,5 +12,13 @@ export class BooksListComponent {
     this.base.getBooks().subscribe(
       (res) => this.books = res
     )
+    console.log(this.books)
   }
+  deleteBook(book: any) {
+    this.base.deleteBook(book);
+  }
+  editBook(book: any) {
+    this.base.putBook(book)
+  }
+
 }
